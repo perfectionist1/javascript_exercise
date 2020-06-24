@@ -1,0 +1,141 @@
+@charset "UTF-8";
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, sans-serif;
+  color: black;
+}
+.fill{
+		min-height: 100vh;
+}
+div.nesting-div p {
+  color: blue;
+}
+div.nesting-div ul {
+  color: green;
+}
+
+div.text-primary > p, div.text-success > p {
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: normal;
+  padding: 0 10px;
+  display: flex;
+  text-align: justify;
+  color: white;
+}
+
+div.text-success > p {
+  background-color: #3A3F4B;
+}
+
+div.text-primary > p {
+  background-color: #938C42;
+}
+
+.txt-pad-t {
+  padding: 5% 0 0 5%;
+}
+
+input[type=text] {
+  color: green !important;
+  padding: 0 0 0 10px;
+}
+
+textarea {
+  color: #6424C9 !important;
+  padding: 5px;
+}
+
+p#para-txt {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+span > a {
+  color: #647864;
+  font-weight: 700;
+}
+
+span > a::before {
+  content: "⇒Click";
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px 0 4px 0;
+}
+
+/*
+** ===============================
+** My Media Query
+** ================================
+*/
+@media print {
+  .screen-only {
+    display: none;
+  }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  p.para-txt {
+    font-size: 12px;
+  }
+
+  h3.content-before::before {
+    content: "Welcome!";
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  p.para-txt {
+    font-size: 14px;
+  }
+
+  h3.content-before::before {
+    content: "Welcome!";
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  p.para-txt {
+    font-size: 15px;
+  }
+
+  h3.content-before::before {
+    content: "Welcome !";
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  p.para-txt {
+    font-size: 16px;
+  }
+
+  h3.content-before::before {
+    content: "Welcome!";
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  p.para-txt {
+    font-size: 16px;
+  }
+
+  h3.content-before::before {
+    content: "Welcome!";
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,154 @@
+h1, h2, h3, h4, h5, h6{
+  font-family: Arial, sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+$color-input-text: green;
+$color-textarea : #6424C9;
+$color-span-a : rgba(100, 120, 100);
+$color-btn : rgb(0, 0, 0);
+$color-btn-bg : rgb(255, 255, 255);
+$color-p: blue;
+$color-ul: green;
+
+
+
+div.nesting-div{
+  p{
+    color: $color-p;
+  }
+  ul{
+    color: $color-ul;
+  }
+}
+
+%my_styled_text{
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: normal;
+  padding: 0 10px;
+  display: flex;
+  text-align: justify;
+  color: $color-btn-bg;
+
+}
+
+div.text-success > p{
+  @extend %my_styled_text;
+  background-color: #3A3F4B ;
+
+}
+
+div.text-primary > p{
+  @extend %my_styled_text;
+  background-color: #938C42;
+
+}
+
+
+.txt-pad-t{
+  padding: 5% 0 0 5%;
+}
+
+input[type=text]{
+  color: $color-input-text !important;
+  padding: 0 0 0 10px;
+}
+textarea{
+  color: $color-textarea !important;
+  padding: 5px;
+}
+p#para-txt{
+  font-weight: 700;
+  font-size: 20px;
+}
+
+span > a{
+  color: $color-span-a;
+  font-weight: 700;
+}
+span > a::before{
+  content: "\21d2 Click"
+}
+a:hover{
+  text-decoration: none;
+}
+button:hover{
+  color: $color-btn;
+  background-color: $color-btn-bg;
+
+}
+
+.footer {
+
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+   padding: 10px 0 4px 0;
+
+}
+
+/*
+** ===============================
+** My Media Query
+** ================================
+*/
+
+@media print{
+  .screen-only{
+    display: none;
+  }
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  p.para-txt{
+    font-size: 12px;
+  }
+  h3.content-before::before{
+    content: "Welcome!";
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  p.para-txt{
+    font-size: 14px;
+  }
+  h3.content-before::before{
+    content: "Welcome!";
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  p.para-txt{
+    font-size: 15px;
+  }
+  h3.content-before::before{
+    content: "Welcome to My Portfolio!";
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  p.para-txt{
+    font-size: 16px;
+  }
+  h3.content-before::before{
+    content: "Welcome to My Portfolio!";
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  p.para-txt{
+    font-size: 16px;
+  }
+  h3.content-before::before{
+    content: "Welcome to My Portfolio!";
+  }
+}
